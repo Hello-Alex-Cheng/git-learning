@@ -12,3 +12,5 @@ description:
 - git merge 是指将指定的分支合并到当前分支
 
 注意: Fast-forward 信息，Git 告诉我们，这次合并是“快进模式”，也就是直接把 master 指向 dev 的当前提交，所以合并速度非常快
+
+## git log --graph
