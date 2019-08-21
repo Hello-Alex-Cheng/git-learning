@@ -51,4 +51,7 @@ description:
 	git stash list (查看存储的内容)
 
 	git stash pop (弹出存储的内容)
+
+
+	git stash drop (可以删除 stash 中的内容)
 ```
