@@ -36,3 +36,5 @@ description:
 `git merge --no-ff -m "merge with no-ff" dev`
 
 ## Bug 分支
+
+每个 bug 都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
