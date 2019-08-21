@@ -23,5 +23,13 @@ description:
 
 > git log --graph --pretty=oneline --abbrev-commit
 
-在使用 git merge 时， 使用 --no-ff 参数表示禁用 fast-forward:
-`git merge --no-ff -m "merge with no-ff" dev`
+1. 通常，合并分支时，如果可能，Git 会用`Fast forward`模式，但这种模式下，删除分支后，会丢掉分支信息。
+
+2. 如果要强制禁用`Fast forward`模式，Git 就会在 merge 时生成一个新的 commit，这样，从分支历史上就可以看出分支信息。
+
+3. 在使用 `git merge` 时， 使用 --no-ff 参数表示禁用 fast-forward:
+   `git merge --no-ff -m "merge with no-ff" dev`
+
+4. 然后就能看到分支合并的信息了
+
+总结: 合并分支时，加上 --no-ff 参数后就可以使用`普通模式`合并，合并后的历史有分支，能看出来曾经做过合并，而使用`fast-forward`模式合并就看不出来曾经做过合并
