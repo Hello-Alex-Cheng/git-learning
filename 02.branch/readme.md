@@ -46,7 +46,7 @@ description:
 2. 用法如下
 
 ```
-	git stash
+	git stash (存储当前工作区的内容)
 
 	git stash list (查看存储的内容)
 
