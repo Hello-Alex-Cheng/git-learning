@@ -18,3 +18,10 @@ description:
 > git log --graph 命令可以看到分支合并图
 
 ## 分支策略管理
+
+使用这个命令查看详细的用户操作流程
+
+> git log --graph --pretty=oneline --abbrev-commit
+
+在使用 git merge 时， 使用 --no-ff 参数表示禁用 fast-forward:
+`git merge --no-ff -m "merge with no-ff" dev`
