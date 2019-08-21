@@ -97,4 +97,4 @@ description:
       	- git rebase
       	- 原理:
       	- Git 将我们本地的提交 "挪动" 了位置,整个放在远程(origin/master)之后了
-      				- 最终结果就是 commit 提交线就是一条直线了
+      	- 最终结果就是 commit 提交线就是一条直线了
