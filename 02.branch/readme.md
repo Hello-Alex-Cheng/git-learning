@@ -16,3 +16,5 @@ description:
 ## git log --graph
 
 > git log --graph 命令可以看到分支合并图
+
+## 分支策略管理
