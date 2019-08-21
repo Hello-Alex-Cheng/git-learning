@@ -51,4 +51,27 @@ description:
 	git stash list (查看存储的内容)
 
 	git stash pop (弹出存储的内容)
+
+	git stash pop (弹出存储的内容同时删除 stash 中的内容)
+
+	git stash apply (弹出stash 中的内容，但是并不删除 stash 中的内容)
+
+	git stash drop (可以删除 stash 中的内容)
+
+```
+
+3. 假设我们在 master 分支上切出了一个 bug 分支，开发完了才知道，这个 bug 原本是要在 dev 上进行开发的，该怎么办呢 ?
+
+- 假设你已经开发完了，那么就 commit 这个 bug 分支的内容
+- 通过 git log 拿到刚刚 commit 的 commit_id
+- git checkout dev
+- git cherry-pick <commit-id> (此时，刚才开发的 bug 分支的内容就迁移到了 dev 分支上了)
+- git branch -d <bug-branch>
+- 但是，如果没有合并的 bug 分支，你是无法删除的，必须使用 `-D` 来进行强制删除
+
+如果没有进行合并的分支，你使用 `git branch -d branch-name` 的话，控制台就会提示出如下信息:
+
+```
+	error: The branch 'issue-002' is not fully merged.
+	If you are sure you want to delete it, run 'git branch -D issue-002'.
 ```
