@@ -76,6 +76,14 @@ description:
 	If you are sure you want to delete it, run 'git branch -D issue-002'.
 ```
 
+cherry-pick 这个指令可以理解为将某个分支的 commit "迁移" 到指定分支上, 看图:
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--3eCyc1bO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/UnseenWizzard/git_training/master/img/cherry_pick.png)
+
+不仅可以 " 迁移 " 一个 commit, 还能同时迁移多个, commit_id 使用 " .. " 隔开:
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--_-UHvfoF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/UnseenWizzard/git_training/master/img/cherry_pick_range.png)
+
 ## 多人协作
 
 1. 首先，可以试图用 git push origin <branch-name>推送自己的修改；
@@ -87,6 +95,7 @@ description:
 4. 如果合并有冲突，则解决冲突，并在本地提交；
 
 5. 没有冲突或者解决掉冲突后，再用 git push origin <branch-name>推送就能成功！
+<<<<<<< HEAD
 
 ## Rebase
 
@@ -98,3 +107,5 @@ description:
       	- 原理:
       	- Git 将我们本地的提交 "挪动" 了位置,整个放在远程(origin/master)之后了
       	- 最终结果就是 commit 提交线就是一条直线了
+=======
+>>>>>>> dev
